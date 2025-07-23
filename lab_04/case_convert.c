@@ -1,19 +1,19 @@
-#include <unistd.h>
+#include <stdio.h>
 
 int	main()
 {
-	int	alp[1];
+	char	alp[1];
 
-	read(STDIN_FILENO, alp, 1);
+	scanf("%c", alp);
 	if (*alp >= 'a' && *alp <= 'z')
 		*alp -= 32;
 	else if (*alp >= 'A' && *alp <= 'Z')
 		*alp += 32;
 	else
 	{
-		write(STDOUT_FILENO, "error", 5);
+		printf("error");
 		return (1);
 	}
-	write(STDOUT_FILENO, alp, 1);
+	printf("%c", *alp);
 	return (0);
 }
