@@ -2,18 +2,28 @@
 
 int	main()
 {
-	float	w1;
-	float	w2;
-	float	w3;
+	float	n[3];
+	float	tmp;
+	int		i;
+	int		t;
 
-	scanf("%f %f %f", &w1, &w2, &w3);
-	if ((w1 >= w2 && w1 <= w3) || (w1 <= w2 && w1 >= w3))
-		printf("%.2f\n", w1);
-	else if ((w2 >= w1 && w2 <= w3) || (w2 <= w1 && w1 >= w3))
-		printf("%.2f\n", w2);
-	else if ((w3 >= w2 && w3 <= w1) || (w3 <= w2 && w3 >= w1))
-		printf("%.2f\n", w3);
-	else
-		printf("%.2f\n", w3);
+	scanf("%f %f %f", n, n + 1, n + 2);
+	t = 0;
+	while (t <= 3 - 1)
+	{
+		i = 0;
+		while (i < (3 - 1) - t)
+		{
+			if (n[i] > n[i + 1])
+			{
+				tmp = n[i];
+				n[i] = n[i + 1];
+				n[i +1] = tmp;
+			}
+			i++;
+		}
+		t++;
+	}
+	printf("%.2f\n", n[1]);
 	return (0);
 }
