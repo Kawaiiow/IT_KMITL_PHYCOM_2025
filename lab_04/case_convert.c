@@ -12,7 +12,7 @@ int	main()
 	else
 	{
 		printf("error");
-		return (1);
+		return (0);
 	}
 	printf("%c", *alp);
 	return (0);
