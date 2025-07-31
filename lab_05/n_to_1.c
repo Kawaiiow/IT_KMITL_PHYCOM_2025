@@ -6,13 +6,9 @@ int	main()
 
 	n = 0;
 	scanf("%d", &n);
-	for (int i = 0; n - i > 0; i++)
-	{
-		if (n - i > 1)
-			printf("%d ", n - i);
-		else
-			printf("%d", n - i);
-	}
+	do
+		printf(n > 1 ? "%d " : "%d", n);
+	while (n-- > 1);
 	return (0);
 }
 
