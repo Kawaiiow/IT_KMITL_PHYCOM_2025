@@ -25,5 +25,6 @@ int	main()
 			return (0);
 		}
 	}
+	printf("%d is not neither M nor N\n", target);
 	return (0);
 }
