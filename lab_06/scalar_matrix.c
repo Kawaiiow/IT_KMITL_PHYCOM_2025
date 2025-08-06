@@ -35,6 +35,8 @@ int	main()
 
 	init_matrix(&a);
 	if (is_scalar(&a))
-		printf("")
+		printf("This is a scalar matrix\n");
+	else
+		printf("This is not a scalar matrix\n");
 	return (0);
 }
