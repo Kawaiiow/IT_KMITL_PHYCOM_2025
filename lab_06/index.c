@@ -2,8 +2,8 @@
 
 int	main()
 {
-	int	m[] = {2, 20, 8, 10, 4, 6, 16, 18};
-	int	n[] = {1, 3, 9, 7, 11, 15, 19};
+	int	m[8] = {2, 20, 8, 10, 4, 6, 16, 18};
+	int	n[7] = {1, 3, 9, 7, 11, 15, 19};
 	int	target;
 
 	scanf("%d", &target);
@@ -25,6 +25,6 @@ int	main()
 			return (0);
 		}
 	}
-	printf("%d is not neither M nor N\n", target);
+	printf("%d is not in neither M nor N\n", target);
 	return (0);
 }
