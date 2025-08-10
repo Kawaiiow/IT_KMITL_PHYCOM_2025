@@ -94,5 +94,6 @@ int	main()
 			stat.cond4++;
 	}
 	display(&stat);
+	free(record);
 	return (0);
 }
