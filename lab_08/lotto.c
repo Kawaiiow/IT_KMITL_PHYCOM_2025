@@ -15,7 +15,7 @@ int	main()
 	scanf("%d %d %d %d %d %d %d", &first, &suf2, &fpre3, &spre3, &fsuf3, &ssuf3, &mine);
 	if (mine == first)
 		prize += 6000000;
-	if (mine == (1000000 + first + 1) % 1000000 || (1000000 + first - 1) % 1000000)
+	if (mine == (1000000 + first + 1) % 1000000 || mine == (1000000 + first - 1) % 1000000)
 		prize += 100000;
 	if (mine % 1000 == fsuf3)
 		prize += 4000;
@@ -25,7 +25,7 @@ int	main()
 		prize += 4000;
 	if (mine / 1000 == spre3)
 		prize += 4000;
-	if (prize % 100 == suf2)
+	if (mine % 100 == suf2)
 		prize += 2000;
 	printf("%zu", prize);
 	return(0);
