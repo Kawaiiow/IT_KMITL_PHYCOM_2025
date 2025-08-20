@@ -27,5 +27,6 @@ int	main()
 		prize += 4000;
 	if (prize % 100 == suf2)
 		prize += 2000;
+	printf("%zu", prize);
 	return(0);
 }
