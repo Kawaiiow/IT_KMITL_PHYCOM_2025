@@ -17,13 +17,13 @@ int	main()
 {
 	t_info	*rec;
 	uint	n;
-	uint	limit;
+	double	limit;
 	double	sum;
 	uint	valid;
 
 	valid = 0;
 	sum = 0;
-	scanf("%u %u", &n, &limit);
+	scanf("%u %lf", &n, &limit);
 	rec = malloc(n * sizeof(t_info));
 	for (uint i = 0; i < n; i++)
 	{
