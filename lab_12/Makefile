@@ -12,6 +12,7 @@ board_list := ${shell arduino-cli board list}
 #
 FQBN_BOARD = arduino:renesas_uno:unor4wifi # TODO: Enter the FQBN of the board
 PORT = /dev/ttyACM0 # TODO: Enter the port that's connect to the board
+SERIAL = 9600
 
 #
 # TODO: always run with sketch name specify in variable
@@ -74,3 +75,8 @@ check:
 
 list:
 	@echo "${board_list}"
+
+monitor:
+	${AR_CLI} monitor -p ${PORT} --config ${SERIAL}
+
+.PHONY: all compile upload new check list
