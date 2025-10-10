@@ -4,7 +4,7 @@
 
 typedef struct	s_info
 {
-	uint	age;
+	unsigned int	age;
 	double	weight;
 }	t_info;
 
@@ -16,20 +16,20 @@ void	input(t_info *rec)
 int	main()
 {
 	t_info	*rec;
-	uint	n;
+	unsigned int	n;
 	double	limit;
 	double	sum;
-	uint	valid;
+	unsigned int	valid;
 
 	valid = 0;
 	sum = 0;
 	scanf("%u %lf", &n, &limit);
 	rec = malloc(n * sizeof(t_info));
-	for (uint i = 0; i < n; i++)
+	for (unsigned int i = 0; i < n; i++)
 	{
 		input(rec + i);
 	}
-	for (uint i = 0; i < n; i++)
+	for (unsigned int i = 0; i < n; i++)
 	{
 		if (rec[i].age >= 12 && !valid)
 			valid = 1;
