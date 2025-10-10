@@ -4,8 +4,8 @@
 
 int	main()
 {
-	uint	src;
-	uint	dest;
+	unsigned int	src;
+	unsigned int	dest;
 
 	scanf("A%u A%u", &src, &dest);
 	printf("%d\n", (int)pow(2, dest - src));
